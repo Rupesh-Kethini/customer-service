@@ -37,6 +37,7 @@ public class CustomerController {
         Customer createdCustomer = customerService.createCustomer(customer);
         return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
+    // simple login check not concentrated much on logic
     @PostMapping("/login")
     public ResponseEntity<String> customerLogin(@RequestBody Credentials crdentials) {
         Customer customer = customerService.login(crdentials);
